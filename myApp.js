@@ -14,10 +14,10 @@ app.get("/", (req, res)=>{
 
 
 app.get("/json", (req, res)=>{
-    if (process.env.MESSAGE_STYLE==="uppercase") {
-         res.json({"message" : "HELLO WORLD"})
+    if (process.env.MESSAGE_STYLE=="uppercase") {
+         res.json({"message": "Hello json"})
     } else {
-        res.json({"message" : "hello world"})
+        res.json({"message": "Hello json"})
     }
 })
 
