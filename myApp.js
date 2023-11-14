@@ -13,7 +13,7 @@ app.get('/', function(req, res){
 
 
 app.get('/json', (req, res) => {
-  if (process.env.MESSAGE_STYLE==='uppercase') {
+  if (mySecret === 'uppercase') {
     return res.json({"message": "HELLO JSON"});
   } else {
     return res.json({"message": "Hello json"});
@@ -22,16 +22,7 @@ app.get('/json', (req, res) => {
 
 console.log('End JSON get method');
 
- app.get("/json", (req, res) => {
-   let message = {"message": "Hello json"};
-  
-   if( process.env.MESSAGE_STYLE === 'uppercase'){
-       return message['message'] = message['message'].toUpperCase();
-       console.log(message['message']);
-   } else {
-       return res.json(message);
-   }
- });
+ 
 
 
  module.exports = app;
